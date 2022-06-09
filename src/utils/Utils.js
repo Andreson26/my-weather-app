@@ -2,15 +2,17 @@
 
 export const getDateAndTime = (weatherData) => {
     let queryDate = weatherData && new Date(weatherData.dt * 1000)
+
    const newDate =  new Date(Date.parse(queryDate))
-   console.log(newDate)
-   /* const currentTime =new Date(newDate).toLocaleString('en-US')
-        
-    console.log(currentTime)
-    const currentDate = new Date(queryDate).toLocaleString("en-US", {
-    }).split(",")[0]
-    console.log(currentDate)
-return [currentDate, currentTime]*/
+    const currentTime =new Date(newDate).toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    })
+    const currentDate = new Date(queryDate).toDateString("en-US")//.split(" ").slice(1).join(' ')
+  
+   
+    return [ currentTime, currentDate]
 
 }
 

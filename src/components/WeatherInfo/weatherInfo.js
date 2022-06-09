@@ -1,14 +1,17 @@
 import React from 'react';
 import { Container, ContainerInfo, InfoCard} from './weatherInfo.style';
-//import { getDateAndTime, convertToF } from '../../utils/Utils';
+import Forecast from '../Forecast/forecast';
+import { getDateAndTime } from '../../utils/Utils';
+
 
 const WeatherInfo = (props) => {
     const {weatherData, isLoading, hasError} = props
 
     const hasData = !isLoading && weatherData
-    //const [currentDate, currentTime] = getDateAndTime(weatherData)
 
-   let temp = hasData && Math.round(hasData.main.temp)
+    const [currentDate, currentTime] = getDateAndTime(weatherData)
+    
+    let temp = hasData && Math.round(hasData.main.temp)
   
    
 
@@ -27,8 +30,8 @@ const WeatherInfo = (props) => {
                         <InfoCard>
                             <h1>{weatherData.name}, {weatherData.sys.country}</h1>
                             <div>                                 
-                                {/*<span>{currentTime}</span>
-                                <span>{currentDate}</span>*/}
+                                <span>{currentTime}</span>
+                                <span>{currentDate}</span>
                                    
                             </div>
                             <div>
@@ -55,9 +58,11 @@ const WeatherInfo = (props) => {
                         </InfoCard>
                         
                     </ContainerInfo>
+                    <Forecast />
                 </div>    
-                
+                 
             )}
+           
         </Container>
      );
 }

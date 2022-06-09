@@ -4,7 +4,7 @@ import WeatherInfo from '../../components/WeatherInfo/weatherInfo';
 
 
 
-const apiKey = process.env.REACT_APP_API_KEY ;
+const apiKey = process.env.REACT_APP_API_KEY;
 const apiUrl = process.env.REACT_APP_API_URL;
 
 class Home extends Component {
@@ -57,14 +57,12 @@ class Home extends Component {
      componentDidMount() {
          
             this.getLocation()
-        console.log('love')
      }
 
      componentDidUpdate(prevProps, prevState) {
          if(prevState.lat !== this.state.lat) {
              this.getWeather()
          }
-         console.log("hate")
      };
 
     render() { 

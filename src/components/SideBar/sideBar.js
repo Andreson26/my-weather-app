@@ -31,7 +31,7 @@ class SideBar extends Component {
                     </p>
                     {this.state.cities.map((city) => (
                         <p key={city}>
-                            <StyledLink to={`/sideBar/${city}`}>{city}</StyledLink>
+                            <StyledLink to={`/city/${city}`}>{city}</StyledLink>
                         </p>
                     )) }
                 </div>

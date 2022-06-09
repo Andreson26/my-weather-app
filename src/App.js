@@ -10,15 +10,18 @@ function App() {
     return (
       <div className="App">
         <Router>
+          <div>
           <SideBar />
           <Switch>
             <Route  exact path='/' component={Home} />
       
-            <Route path="/sideBar/:cityId" component={City} />
+            <Route exact path="/city/:cityId" component={City} />
           </Switch>
+        </div>
         </Router>
-       
       </div>
+       
+     
     );
   
  
