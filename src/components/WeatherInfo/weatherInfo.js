@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, ContainerInfo, InfoCard} from './weatherInfo.style';
 import Forecast from '../Forecast/forecast';
-import { getDateAndTime } from '../../utils/Utils';
+import { getDateAndTime, convertToF } from '../../utils/Utils';
+
 
 
 const WeatherInfo = (props) => {
-    const {weatherData, isLoading, hasError} = props
+    const {weatherData, isLoading, hasError, isCelcius} = props
     
     const hasData = !isLoading && !!weatherData
     
@@ -26,7 +27,7 @@ return (
                 <div>
                     <h1>Weather Forecast</h1>
                     <ContainerInfo>
-                            <h3>{temp}°<button>C</button><button>/F</button></h3>
+                            <h3>{temp}°<button>C</button><button onClick={()=> isCelcius ? convertToF(temp) : convertToF({temp}) }>/F</button></h3>
                             <p><span>Feels like:</span> {Math.ceil(weatherData.main.feels_like)}°</p>
                         <InfoCard>
                             <h1>{weatherData.name}, {weatherData.sys.country}</h1>
@@ -58,8 +59,10 @@ return (
                             
                         </InfoCard>
                     </ContainerInfo>
-
-                    <Forecast lat={lat} lon={lon} />   
+                    <div style={{width: 700, color: 'white'}}>
+                        <Forecast lat={lat} lon={lon} />  
+                    </div>
+                       
                 </div> 
              )}
 

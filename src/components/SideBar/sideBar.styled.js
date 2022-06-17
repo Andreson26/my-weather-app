@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 export const StyledSideBar = styled.div`
    text-align: center;
     width: 30%;
-    background-color: rgba(0,0,0,0.5);
     padding: 50px 10px;
     
 

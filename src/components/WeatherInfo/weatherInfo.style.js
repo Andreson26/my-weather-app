@@ -1,16 +1,26 @@
 import styled from 'styled-components';
+import Cloudy from '../images/cloudy.jpg'
+import Rainy from '../images/rainy.jpg'
+import Stormy from '../images/stormy.jpg'
+import Windy from '../images/windy.jpg'
+
+const weatherBackground = {
+
+}
 
 export const Container = styled.div`
     display: flex;
     align-item: center;
     justify-content: center;
-    color: rgb(77, 75, 75);
+    color: black;
     width: 70%;
-    background-color: rgb(168, 204, 218);
+    background-image: url(${Cloudy});
+    backgound-size: cover;
 
     h1 {
         font-size: 35px;
-        font-family: sans-serif
+        font-family: sans-serif;
+        text-align: center;
     }
     h3 {
         font-size: 20px;

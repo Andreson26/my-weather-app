@@ -18,7 +18,7 @@ export const getDateAndTime = (weatherData) => {
 
 
 export function convertToF(cel) {
-   
+   console.log('hello')
     const celTemp = cel
     const celToFahr =Math.ceil(celTemp  * 9 / 5 + 32);
     return celToFahr

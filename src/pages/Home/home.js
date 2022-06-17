@@ -14,6 +14,7 @@ class Home extends Component {
         isLoading: false,
         hasError: false,
         weatherData: null,
+        isCelcius: false
      }
 
      showPosition = (position) => {
