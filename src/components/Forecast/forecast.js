@@ -48,7 +48,11 @@ class Forecast extends Component {
         }
 
         const hasData = !!Object.keys(forecastData).length
+<<<<<<< HEAD
         
+=======
+        console.log(hasData)
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
         return (
             <div>
                  {hasError && !isLoading && (
@@ -85,6 +89,7 @@ class Forecast extends Component {
                                 backgroundColor: "white"
                               }
                             },
+<<<<<<< HEAD
                             scales: {
                                 x: {
                                     ticks: {
@@ -97,6 +102,8 @@ class Forecast extends Component {
                                     }
                                 }
                             }
+=======
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
                             
                         }}      
                     />

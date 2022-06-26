@@ -14,11 +14,17 @@ class Home extends Component {
         isLoading: false,
         hasError: false,
         weatherData: null,
+<<<<<<< HEAD
         isCelcius: false,
         scale: 'C'
      }
 
 
+=======
+        isCelcius: false
+     }
+
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
      showPosition = (position) => {
          this.setState({
              lon: position.coords.longitude,
@@ -49,9 +55,13 @@ class Home extends Component {
                  ...data,
                  visibility: data.visibility * 0.00062137,
                  pressure: data.main.pressure * 0.0295301,
+<<<<<<< HEAD
                  temp: Math.round(data.main.temp)
             }
             console.log(newData)
+=======
+            }
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
             this.setState({weatherData: newData, isLoading: false})
 
             }catch(err) {
@@ -70,6 +80,7 @@ class Home extends Component {
          }
      };
 
+<<<<<<< HEAD
      handleMetricChange = () => {
         if (this.state.isCelcius === false) {
             this.setState({isCelcius: true, scale: "F"})
@@ -80,6 +91,8 @@ class Home extends Component {
 
      
 
+=======
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
     render() { 
         const {...rest} = this.state
         
@@ -87,7 +100,10 @@ class Home extends Component {
             
             <WeatherInfo 
                    { ...rest}
+<<<<<<< HEAD
                    handleMetricChange={this.handleMetricChange}
+=======
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
             />
             
          );

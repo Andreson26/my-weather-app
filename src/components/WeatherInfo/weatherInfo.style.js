@@ -46,7 +46,10 @@ export const ContainerInfo = styled.div`
             background-color: transparent;
             margin: -5px;
             cursor: pointer;
+<<<<<<< HEAD
             font-size: 25px
+=======
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
         }
     }
     p {

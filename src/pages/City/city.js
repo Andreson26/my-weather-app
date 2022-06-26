@@ -11,13 +11,20 @@ class  City extends Component {
         isLoading: false,
         hasError: false,
         weatherData: null,
+<<<<<<< HEAD
         isCelcius: false,
         scale: 'C'
+=======
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
         
      } 
      
      getWeather = async() => {
+<<<<<<< HEAD
          this.setState({isLoading: true, hasError: false})
+=======
+         this.setState({siLoading: true})
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
          const {cityId} = this.props.match.params
         
          try {
@@ -39,6 +46,7 @@ class  City extends Component {
         }
      }
 
+<<<<<<< HEAD
      handleMetricChange = () => {
         if (this.state.isCelcius == false) {
             this.setState({isCelcius: true, scale: "F"})
@@ -47,12 +55,17 @@ class  City extends Component {
         }
      }
 
+=======
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
     render() {
         const {...rest} = this.state
         return (
             <WeatherInfo 
                 {...rest}
+<<<<<<< HEAD
                 handleMetricChange={this.handleMetricChange}
+=======
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
             />
         )
       }

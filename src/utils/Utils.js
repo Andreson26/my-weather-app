@@ -1,6 +1,10 @@
 
 
+<<<<<<< HEAD
 export const getDateAndTime = (weatherData, isCelcius) => {
+=======
+export const getDateAndTime = (weatherData) => {
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
     let queryDate = weatherData && new Date(weatherData.dt * 1000)
     //console.log(queryDate)
    const newDate =  new Date(Date.parse(queryDate))
@@ -18,6 +22,10 @@ export const getDateAndTime = (weatherData, isCelcius) => {
 
 
 export function convertToF(cel) {
+<<<<<<< HEAD
+=======
+   console.log('hello')
+>>>>>>> 3534f5dedebca4115cbdf80d421e6df97686d654
     const celTemp = cel
     const celToFahr =Math.ceil(celTemp  * 9 / 5 + 32);
     return celToFahr
